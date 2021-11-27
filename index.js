@@ -1,6 +1,7 @@
-var current_Panel = document.getElementById("about");
-var current_Color = document.getElementById("aboutbtn");
-var panelnum = 0;
+var current_Panel = document.getElementById("home");
+var current_Color = document.getElementById("homebtn");
+current_Color.style.color = "#118ab2";
+var panelnum = 1;
 menuopen = 0;
 mobile = 0;
 
@@ -14,40 +15,65 @@ function showone(on) {
 function show(panel) {
   if (!mobile) {
     if (panel == 1) {
-      if (current_Panel != null) {
-        current_Panel.style.top = "-100%";
+      if (panel != panelnum) {
+        if (current_Panel != null) {
+          current_Panel.style.top = "-100%";
+        }
+        current_Panel = document.getElementById("home");
+        current_Color.style.color = "black";
+        current_Color = document.getElementById("homebtn");
+        current_Color.style.color = "#118ab2";
+        current_Panel.style.top = "0%";
+        panelnum = panel;
       }
-      current_Panel = document.getElementById("about");
-      current_Color.style.color = "black";
-      current_Color = document.getElementById("workbtn");
-      current_Panel.style.top = "0%";
     } else if (panel == 2) {
-      if (current_Panel != null) {
-        current_Panel.style.top = "-100%";
+      if (panel != panelnum) {
+        if (current_Panel != null) {
+          current_Panel.style.top = "-100%";
+        }
+        current_Panel = document.getElementById("about");
+        current_Color.style.color = "black";
+        current_Color = document.getElementById("aboutbtn");
+        current_Color.style.color = "#118ab2";
+        current_Panel.style.top = "0%";
+        panelnum = panel;
       }
-      current_Panel = document.getElementById("work");
-      current_Color.style.color = "black";
-      current_Color = document.getElementById("workbtn");
-      current_Color.style.color = "#06d6a0";
-      current_Panel.style.top = "0%";
     } else if (panel == 3) {
-      if (current_Panel != null) {
-        current_Panel.style.top = "-100%";
+      if (panel != panelnum) {
+        if (current_Panel != null) {
+          current_Panel.style.top = "-100%";
+        }
+        current_Panel = document.getElementById("work");
+        current_Color.style.color = "black";
+        current_Color = document.getElementById("workbtn");
+        current_Color.style.color = "#118ab2";
+        current_Panel.style.top = "0%";
+        panelnum = panel;
       }
-      current_Panel = document.getElementById("skills");
-      current_Color.style.color = "black";
-      current_Color = document.getElementById("skillsbtn");
-      current_Color.style.color = "#ef476f";
-      current_Panel.style.top = "0%";
     } else if (panel == 4) {
-      if (current_Panel != null) {
-        current_Panel.style.top = "-100%";
+      if (panel != panelnum) {
+        if (current_Panel != null) {
+          current_Panel.style.top = "-100%";
+        }
+        current_Panel = document.getElementById("projects");
+        current_Color.style.color = "black";
+        current_Color = document.getElementById("projectsbtn");
+        current_Color.style.color = "#118ab2";
+        current_Panel.style.top = "0%";
+        panelnum = panel;
       }
-      current_Panel = document.getElementById("projects");
-      current_Color.style.color = "black";
-      current_Color = document.getElementById("projectsbtn");
-      current_Color.style.color = "#ffc43d";
-      current_Panel.style.top = "0%";
+    } else if (panel == 5) {
+      if (panel != panelnum) {
+        if (current_Panel != null) {
+          current_Panel.style.top = "-100%";
+        }
+        current_Panel = document.getElementById("skills");
+        current_Color.style.color = "black";
+        current_Color = document.getElementById("skillsbtn");
+        current_Color.style.color = "#118ab2";
+        current_Panel.style.top = "0%";
+        panelnum = panel;
+      }
     }
   } else {
     // document.getElementById("menu").style.top = "-100%";
@@ -145,7 +171,10 @@ window.onresize = function () {
     document.getElementById("name").style.paddingRight = "4rem";
     document.getElementById("namegreet").style.paddingRight = "4rem";
     document.getElementById("Info").style.paddingRight = "4rem";
-    document.getElementsByClassName("paneltitle")[0].style.display = "block";
+    for (let index = 0; index < 3; index++) {
+      document.getElementsByClassName("paneltitle")[index].style.display =
+        "block";
+    }
     document.getElementById("cursor").style.display = "none";
     document.getElementById("cursorback").style.display = "none";
     mobile = 1;

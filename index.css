@@ -55,7 +55,8 @@
   width: 75vw;
   position: absolute;
   left: 25%;
-  top: 0%;
+  top: -100%;
+  z-index: 1;
   overflow: unset;
   overflow-x: hidden;
   background-color: white;
@@ -68,6 +69,7 @@
   position: absolute;
   left: 25%;
   top: -100%;
+  z-index: 1;
   overflow: scroll;
   overflow-x: hidden;
   background-color: white;
@@ -79,6 +81,7 @@
   position: absolute;
   left: 25%;
   top: -100%;
+  z-index: 1;
   overflow: scroll;
   overflow-x: hidden;
   background-color: white;
@@ -89,10 +92,11 @@
   width: 75vw;
   position: absolute;
   left: 25%;
+  z-index: 1;
   overflow: scroll;
   overflow-x: hidden;
   top: -100%;
-  background-color: black;
+  background-color: white;
   transition-duration: 1s;
 }
 
@@ -115,6 +119,25 @@
   padding-left: 4rem;
   color: black;
 }
+
+#name1 {
+  text-align: left;
+  font-size: 4rem;
+  font-family: sans-serif;
+  font-weight: 900;
+  padding-left: 4rem;
+  /* padding-right: 8rem; */
+  color: black;
+}
+#name2 {
+  text-align: right;
+  font-size: 4rem;
+  font-family: sans-serif;
+  font-weight: 900;
+  /* padding-right: 4rem; */
+  padding-right: 8rem;
+  color: black;
+}
 #namegreet {
   text-align: right;
   font-size: 2.5rem;
@@ -129,6 +152,19 @@
   font-size: 1rem;
   padding-left: 4rem;
 }
+#Info1 {
+  text-align: justify;
+  color: #000;
+  font-size: 1rem;
+  padding-left: 4rem;
+  padding-right: 8rem;
+}
+/* #Info2 {
+  text-align: justify;
+  color: #000;
+  font-size: 1rem;
+  padding-right: 4rem;
+} */
 body,
 body * {
   margin: 0;
@@ -260,4 +296,9 @@ a {
   padding-bottom: 10%;
   height: 100%;
   /* top: 10%; */
+}
+
+.card-header {
+  background-color: #000;
+  color: white;
 }
